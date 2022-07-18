@@ -1,0 +1,1446 @@
+* {
+    margin:0;
+    padding:0;
+}
+body {
+	height : 100%;
+	font-family : '맑은 고딕', sans-serif;
+	color : #444;
+}
+a:link{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+/*스마트폰 미디어쿼리*/
+@media screen and (max-width: 767px){
+    .container{
+        width: 100%;
+    }
+    /*헤더*/
+    header{
+        height: 52px;
+        border-bottom: 1px solid #e4e4e4;
+    }
+    #innerHeader{
+        width: 100%;
+        height: 52px;
+        position: relative;
+    }
+    #innerHeader h4 a{
+        display: block;
+        width: 126px;
+        height: 21px;
+        position: relative;
+        top: 20px;
+        left: 20px;
+        text-indent: -9999px;
+        overflow: hidden;
+        background: url(../images/logo.png)no-repeat 0 0;
+        background-size: 80px 15px;
+    }
+    .openMOgnb{
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        width: 22px;
+        height: 22px;
+        background-size: 22px;
+        cursor: pointer;
+    }
+    .openMOgnb img{
+        width: 22px;
+        height: 22px;
+    }
+    #searchBar{
+        position: absolute;
+        width: 30%;
+        top: 17px;
+        right: 115px;
+        padding: 2px 5px;
+        border: 1px solid #dededf ;
+    }
+    button{
+        position: absolute;
+        top: 16px;
+        right: 70px;
+        border: 1px solid #dededf;
+        background: white;
+        border-radius: 5px;
+        padding: 2px 5px;
+        cursor: pointer;
+    }
+    #innerHeader nav{
+        margin-top: 30px;
+        position: relative;
+        z-index: 500;
+        /* z-index는 static에선 안 먹히니 반드시 positoin:relative 써줄 것!*/
+    }
+    #innerHeader nav ul.gnb{
+        width: 100%;
+        background : #dededf;
+        text-align: center;
+        display: none;
+    }
+    .gnb a{
+        display: block;
+    }
+    #innerHeader nav ul li{
+        padding: 10px 0;
+        line-height: 120%;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    #innerHeader nav ul li a{
+        color: #444;
+    }
+    #innerHeader nav ul li a:link{
+        color: #444;
+    }
+    #innerHeader nav ul li a:visited{
+        color: #444;
+    }
+    /*배너*/
+    figure{
+        width: 100%;
+        overflow: hidden;
+    }
+    figure:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    #trainRoomM{
+        width: 200%;
+    }
+    #trainRoomT,#trainRoom{
+        display: none;
+    }
+    .bxsliderM li{
+        width: 50%;
+        float: left;
+    }
+    .bxsliderM li img{
+        width: 50%;
+    }
+    /*컨텐츠*/
+    #conBox{
+        margin-top: 50px;
+        width: 95%;
+    }
+    /*아이콘메뉴*/
+    section#menu{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 95%;
+    }
+    section#menu h3{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .icons:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .icons{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+    }
+    .icons li{
+        height: 100px;
+        margin-bottom: 30px;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .icons li:hover{
+        opacity: 0.7;
+    }
+    .icons li a:link,.icons li a:visited{
+        color: #444;
+    }
+    .icons li img{
+        width: 70px;
+        height: 70px;
+    }
+    .icons li p.icontext{
+        text-align: center;
+        font-size: 13px;
+        font-weight: bold;
+        padding-top: 10px;
+    }
+    /*알려드립니다.*/
+    article#news{
+        width: 100%;
+        height: 200px;
+        padding-top: 25px;
+        box-sizing: border-box;
+        position : relative;
+        z-index : 10;
+    }
+    article#news:after {
+        width : 100%;
+        height : 100%;
+        content : "";
+        background: url(../images/reservation.jpg) left;
+        background-size: 100%;
+        opacity: 0.5;
+        position : absolute;
+        top : 0;
+        left : 0;
+        z-index : -1;
+    }
+    #news a{
+        text-align: center;
+    }
+    #news a:link,#news a:visited{
+        color: rgb(0, 0, 0);
+    }
+    #news a h2{
+        font-size: 21px;
+        margin-top: -20px;
+        padding: 70px 0;
+    }
+    #news a h2 strong{
+        font-size: 15px;
+    }
+    /*메인*/
+    #colorArea{
+        background-color: rgb(245, 245, 245);
+        padding: 20px 0;
+    }
+    /*오시는길영역*/
+    #soughtAfter{
+        background-color: #ef6266;
+        padding: 20px 0px;
+        border-radius: 30px 10px 30px 10px;
+        margin-bottom: 50px;
+    }
+    #soughtAfter ul li{
+        border-bottom: 1px solid rgb(255, 173, 173);
+        padding: 10px;
+        text-indent: 20px;
+    }
+    #soughtAfter ul li:last-child{
+        border: none;
+    }
+    #soughtAfter ul li a{
+        display: block;
+    }
+    .sought1{
+        background: url(../images/iconmap.png)no-repeat 90% 0;
+    }
+    .sought2{
+        background: url(../images/iconparking.png)no-repeat 90% 0;
+    }
+    .sought3{
+        background: url(../images/icondocu.png)no-repeat 90% 0;
+    }
+    .sought4{
+        background: url(../images/iconinfo.png)no-repeat 90% 0;
+    }
+    .sought5{
+        background: url(../images/iconstair.png)no-repeat 90% 0;
+    }
+    #soughtAfter ul li a,#soughtAfter ul li a:link,#soughtAfter ul li a:visited{
+        color: white;
+    }
+    /*진료과안내영역*/
+    #info{
+        background-color: #2fa298;
+        padding: 20px 0;
+        border-radius: 10px 30px 10px 30px;
+        margin-bottom: 50px;
+    }
+    #info ul li{
+        border-bottom: 1px solid #4dd4c9;
+        padding: 10px;
+        text-indent: 20px;
+    }
+    #info ul li:last-child{
+        border: none;
+    }
+    #info ul li a{
+        display: block;
+    }
+    .info1{
+        background: url(../images/icondepartment.png)no-repeat 90% 0;
+    }
+    .info2{
+        background: url(../images/iconschedule.png)no-repeat 90% 0;
+    }
+    .info3{
+        background: url(../images/iconbed.png)no-repeat 90% 0;
+    }
+    .info4{
+        background: url(../images/iconbuilding.png)no-repeat 90% 0;
+    }
+    #info ul li a:link,#info ul li a:visited{
+        color: rgb(255, 255, 255);
+    }
+    /*국민건강알림서비스*/
+    #alert{
+        border: 1px solid rgb(226, 226, 226);
+        background-color: white;
+        border-radius: 20px;
+        padding: 20px;
+        margin-bottom: 50px;
+    }
+    #alert p{
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    #Btnarea{
+        position: relative;
+        width: 100%;
+        margin-top: 160px;
+        margin-bottom: 20px;
+    }
+    #Btnarea ul{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        text-align: center;
+    }
+    #Btnarea li{
+        border: 1px solid #ccc;
+        padding: 5px 0;
+    }
+    #Btnarea li a:link,#Btnarea li a:visited{
+        color: #444;
+    }
+    #Btnarea a{
+        display: block;
+    }
+    #alert h2{
+        margin-top: 10px;
+        position : absolute;
+        text-align: center;
+	    top : -160px;
+	    left : 0;
+        width: 100%;
+    }
+    /*고객센터영역*/
+    #service{
+        border: 1px solid rgb(226, 226, 226);
+        background-color: white;
+        border-radius: 20px;
+        padding: 20px;
+        color: #444;
+        margin-bottom: 50px;
+    }
+    #service p{
+        font-size: 18px;
+        font-weight: bold;
+    }
+    #service ul.serviceBox{
+        margin: 20px 0px;
+    }
+    .serviceBox li{
+        background-color:rgb(243, 243, 243);
+        border-radius: 15px;
+        height: 95px;
+        margin-bottom: 20px;
+        padding: 20px 20px;
+        box-sizing: border-box;
+        position: relative;
+    }
+    .serviceBox h3{
+        width: 45%;
+        font-size: 15px;
+        margin-left: 5%;
+    }
+    .serviceBox h2{
+        display: inline;
+        font-size: 18px;
+        width: 45%;
+        margin-left: 5%;
+    }
+    .serviceBox h5{
+        float: right;
+        width: 42%;
+        margin-top: -20px;
+    }
+    .serviceBox li:nth-of-type(3){
+        width: 48%;
+        float: left;
+    }
+    .serviceBox li:nth-of-type(4){
+        width: 48%;
+        float: right;
+    }
+    .serviceBox::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .serviceBox h4{
+        text-align: center;
+        margin-top: -20px;
+        margin-left: -20px;
+        margin-right: -20px;
+        line-height: 90px;
+    }
+    .serviceBox h4 img{
+        width: 22px;
+        height: 22px;
+        position: relative;
+        top: 5px;
+        right: 5px;
+    }
+    .highlight{
+        display: inline-table;
+        position: relative;
+        overflow: hidden;
+    }
+    .highlight span{
+        position: relative;
+        z-index: 2;
+    }
+    .highlight::before{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 25px;
+        background: rgba(255, 200, 0, .8);
+        position: absolute;
+        top: 35px;
+        left: -100%;
+        transition: all .35s;
+        z-index: 1;
+    }
+    .serviceBox li:hover .highlight::before{
+        left: 0;
+    }
+    .serviceBox li a:link,.serviceBox li a:visited{
+        color: #444;
+    }
+    /*퀵메뉴영역*/
+    #quick{
+        margin-bottom: 50px;
+    }
+    #quick::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    #quick ul li{
+        width: 48%;
+        text-align: center;
+        background-color:rgb(255, 255, 255);
+        border-radius: 10px;
+        font-weight: bold;
+    }
+    #quick ul li:first-child{
+        float: left;
+    }
+    #quick ul li:last-child{
+        float: right;
+    }
+    #quick ul li a:link,#quick ul li a:visited{
+        color: #444;
+    }
+    #quick ul li h1{
+        font-size: 15px;
+        font-weight: normal;
+        padding: 10px;
+    }
+    /*푸터*/
+    footer{
+        background-color: rgb(247, 247, 247);
+        padding: 20px 20px;
+        text-align: center;
+        border-top: 1px solid #e4e4e4;
+    }
+    #innerFooter:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    #innerFooter #logowb{
+        width: 20%;
+        margin-bottom: 10px;
+    }
+    .address{
+        font-size: 13px;
+    }
+    .copy{
+        margin-top: 10px;
+        font-size: 13px;
+        font-weight: bold;
+    }
+    .footIcon{
+        margin: 30px 0;
+    }
+    .footIcon li{
+        display: inline;
+        padding: 0px 20px;
+    }
+    .footIcon li img{
+        width: 50px;
+        height: 50px;
+    }
+}/*스마트폰 미디어쿼리 끝*/
+
+
+
+/*테블릿 미디어쿼리*/
+@media screen and (min-width:768px) and (max-width: 1024px){
+    .container{
+        width: 100%;
+    }
+    /*헤더*/
+    header{
+        height: 52px;
+        border-bottom: 1px solid #e4e4e4;
+    }
+    #innerHeader{
+        width: 100%;
+        height: 52px;
+        position: relative;
+    }
+    #innerHeader h4 a{
+        display: block;
+        width: 126px;
+        height: 21px;
+        position: relative;
+        top: 17px;
+        left: 20px;
+        text-indent: -9999px;
+        overflow: hidden;
+        background: url(../images/logo.png)no-repeat 0 0;
+        background-size: 126px 21px;
+    }
+    .openMOgnb{
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        width: 22px;
+        height: 22px;
+        background-size: 22px;
+        cursor: pointer;
+    }
+    .openMOgnb img{
+        width: 22px;
+        height: 22px;
+    }
+    #searchBar{
+        position: absolute;
+        top: 17px;
+        right: 115px;
+        padding: 2px 5px;
+        border: 1px solid #dededf ;
+    }
+    button{
+        position: absolute;
+        top: 16px;
+        right: 70px;
+        border: 1px solid #dededf;
+        background: white;
+        border-radius: 5px;
+        padding: 2px 5px;
+        cursor: pointer;
+    }
+    #innerHeader nav{
+        margin-top: 30px;
+        position: relative;
+        z-index: 500;
+        /* z-index는 static에선 안 먹히니 반드시 positoin:relative 써줄 것!*/
+    }
+    #innerHeader nav ul.gnb{
+        width: 100%;
+        background : #ffffff;
+        text-align: center;
+        display: none;
+    }
+    .gnb a{
+        display: block;
+    }
+    #innerHeader nav ul li{
+        padding: 10px 0;
+        line-height: 180%;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    #innerHeader nav ul li a{
+        color: #444;
+    }
+    #innerHeader nav ul li a:link{
+        color: #444;
+    }
+    #innerHeader nav ul li a:visited{
+        color: #444;
+    }
+    /*배너*/
+    figure{
+        width: 100%;
+        overflow: hidden;
+    }
+    figure::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    #trainRoomT{
+        width: 200%;
+    }
+    #trainRoomM,#trainRoom{
+        display: none;
+    }
+    .bxsliderT li{
+        width: 50%;
+        float: left;
+    }
+    .bxsliderT li img{
+        width: 50%;
+    }
+    /*컨텐츠*/
+    #conBox{
+        margin-top: 50px;
+        width: 95%;
+    }
+    /*아이콘메뉴*/
+    section#menu{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 95%;
+    }
+    section#menu h3{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .icons::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .icons{
+        display: grid;
+        grid-template-columns: repeat(7,1fr);
+    }
+    .icons li{
+        height: 110px;
+        margin-bottom: 30px;
+        text-align: center;
+        padding: 20px 0px;
+    }
+    .icons li:hover{
+        opacity: 0.7;
+    }
+    .icons li a:link,.icons li a:visited{
+        color: #444;
+    }
+    .icons li img{
+        width: 70px;
+        height: 70px;
+    }
+    .icons li p.icontext{
+        text-align: center;
+        font-size: 15px;
+        padding-top: 10px;
+    }
+    /*알려드립니다.*/
+    article#news{
+        width: 100%;
+        height: 200px;
+        padding-top: 25px;
+        box-sizing: border-box;
+        position : relative;
+        z-index : 10;
+    }
+    article#news:after {
+        width : 100%;
+        height : 100%;
+        content : "";
+        background: url(../images/reservation.jpg) center;
+        background-size: 100%;
+        opacity: 0.5;
+        position : absolute;
+        top : 0;
+        left : 0;
+        z-index : -1;
+    }
+    #news a{
+        text-align: center;
+    }
+    #news a:link,#news a:visited{
+        color: rgb(0, 0, 0);
+    }
+    #news a h2{
+        font-size: 21px;
+        margin-top: -20px;
+        padding: 70px 0;
+    }
+    #news a h2 strong{
+        font-size: 15px;
+    }
+    /*메인*/
+    #colorArea{
+        background-color: rgb(245, 245, 245);
+        padding: 20px 0;
+    }
+    .innerBox div{
+        float: left;
+        margin-right: 2%;
+    }
+    .innerBox div:last-child{
+        margin-right: 0;
+    }
+    .innerBox:after{
+        content: " ";
+        display: block;
+        clear: both;
+    }
+    /*오시는길영역*/
+    #soughtAfter{
+        width: 30%;
+        background-color: #ef6266;
+        padding: 20px 0px;
+        border-radius: 30px 10px 30px 10px;
+        margin-bottom: 50px;
+    }
+    #soughtAfter ul li{
+        border-bottom: 1px solid rgb(255, 173, 173);
+        padding: 10px;
+        text-indent: 20px;
+    }
+    #soughtAfter ul li:last-child{
+        border: none;
+    }
+    #soughtAfter ul li a{
+        display: block;
+    }
+    .sought1{
+        background: url(../images/iconmap.png)no-repeat 90% 0;
+    }
+    .sought2{
+        background: url(../images/iconparking.png)no-repeat 90% 0;
+    }
+    .sought3{
+        background: url(../images/icondocu.png)no-repeat 90% 0;
+    }
+    .sought4{
+        background: url(../images/iconinfo.png)no-repeat 90% 0;
+    }
+    .sought5{
+        background: url(../images/iconstair.png)no-repeat 90% 0;
+    }
+    #soughtAfter ul li a,#soughtAfter ul li a:link,#soughtAfter ul li a:visited{
+        color: white;
+    }
+    /*진료과안내영역*/
+    #info{
+        width: 30%;
+        background-color: #2fa298;
+        padding: 20px 0;
+        border-radius: 10px 30px 10px 30px;
+        margin-bottom: 50px;
+    }
+    #info ul li{
+        border-bottom: 1px solid #4dd4c9;
+        padding: 10px;
+        text-indent: 20px;
+    }
+    #info ul li:last-child{
+        border: none;
+    }
+    #info ul li a{
+        display: block;
+    }
+    .info1{
+        background: url(../images/icondepartment.png)no-repeat 90% 0;
+    }
+    .info2{
+        background: url(../images/iconschedule.png)no-repeat 90% 0;
+    }
+    .info3{
+        background: url(../images/iconbed.png)no-repeat 90% 0;
+    }
+    .info4{
+        background: url(../images/iconbuilding.png)no-repeat 90% 0;
+    }
+    #info ul li a,#info ul li a:link,#info ul li a:visited{
+        color: rgb(255, 255, 255);
+    }
+    /*국민건강알림서비스*/
+    #alert{
+        width: 30%;
+        border: 1px solid rgb(226, 226, 226);
+        background-color: white;
+        border-radius: 20px;
+        padding: 20px;
+        margin-bottom: 50px;
+    }
+    #alert p{
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    #Btnarea{
+        position: relative;
+        width: 100%;
+        margin-top: 160px;
+        margin-bottom: 20px;
+    }
+    #Btnarea ul{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        text-align: center;
+    }
+    #Btnarea li{
+        font-size: 13px;
+        border: 1px solid #ccc;
+        padding: 5px;
+    }
+    #Btnarea li a:link,#Btnarea li a:visited{
+        color: #444;
+    }
+    #Btnarea a{
+        display: block;
+    }
+    #alert h2{
+        margin-top: 10px;
+        position : absolute;
+        text-align: center;
+	    top : -160px;
+	    left : 0;
+        width: 100%;
+    }
+    /*고객센터영역*/
+    #service{
+        border: 1px solid rgb(226, 226, 226);
+        background-color: white;
+        border-radius: 20px;
+        padding: 20px;
+        color: #444;
+        margin-bottom: 50px;
+    }
+    #service p{
+        font-size: 18px;
+        font-weight: bold;
+    }
+    #service ul.serviceBox{
+        margin: 20px 0px;
+    }
+    .serviceBox li{
+        background-color:rgb(243, 243, 243);
+        border-radius: 15px;
+        height: 95px;
+        margin-bottom: 20px;
+        padding: 20px 20px;
+        box-sizing: border-box;
+        position: relative;
+    }
+    .serviceBox li:nth-of-type(odd){
+        width: 48%;
+        float: left;
+    }
+    .serviceBox li:nth-of-type(even){
+        width: 48%;
+        float: right;
+    }
+    .serviceBox h3{
+        width: 45%;
+        font-size: 15px;
+        margin-left: 5%;
+    }
+    .serviceBox h2{
+        font-size: 21px;
+        display: inline;
+        width: 45%;
+        margin-left: 5%;
+    }
+    .serviceBox h5{
+        float: right;
+        width: 45%;
+        margin-top: -20px;
+    }
+    .serviceBox:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .serviceBox h4{
+        text-align: center;
+        margin-top: -20px;
+        margin-left: -20px;
+        margin-right: -20px;
+        line-height: 90px;
+    }
+    .serviceBox h4 img{
+        width: 22px;
+        height: 22px;
+        position: relative;
+        top: 5px;
+        right: 5px;
+    }
+    .highlight{
+        display: inline-table;
+        position: relative;
+        overflow: hidden;
+    }
+    .highlight span{
+        position: relative;
+        z-index: 2;
+    }
+    .highlight::before{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 25px;
+        background: rgba(255, 200, 0, .8);
+        position: absolute;
+        top: 35px;
+        left: -100%;
+        transition: all .35s;
+        z-index: 1;
+    }
+    .serviceBox li:hover .highlight::before{
+        left: 0;
+    }
+    .serviceBox li a:link,.serviceBox li a:visited{
+        color: #444;
+    }
+    /*퀵메뉴영역*/
+    #quick{
+        margin-bottom: 50px;
+    }
+    #quick::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    #quick ul li{
+        width: 48%;
+        text-align: center;
+        background-color:rgb(255, 255, 255);
+        border-radius: 10px;
+        font-weight: bold;
+    }
+    #quick ul li:first-child{
+        float: left;
+    }
+    #quick ul li:last-child{
+        float: right;
+    }
+    #quick ul li a:link,#quick ul li a:visited{
+        color: #444;
+    }
+    #quick ul li h1{
+        font-size: 15px;
+        font-weight: normal;
+        padding: 10px;
+    }
+    /*푸터*/
+    footer{
+        background-color: rgb(247, 247, 247);
+        padding: 20px 20px;
+        text-align: center;
+        border-top: 1px solid #e4e4e4;
+    }
+    #innerFooter:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    #innerFooter #logowb{
+        width: 20%;
+        margin-bottom: 10px;
+    }
+    .address{
+        font-size: 13px;
+    }
+    .copy{
+        margin-top: 10px;
+        font-size: 13px;
+        font-weight: bold;
+    }
+    .footIcon{
+        margin: 30px 0;
+    }
+    .footIcon li{
+        display: inline;
+        padding: 0px 20px;
+    }
+    .footIcon li img{
+        width: 65px;
+        height: 65px;
+    }
+}/*테블릿 미디어쿼리 끝*/
+
+
+/*pc 미디어쿼리*/
+@media screen and (min-width:1025px){
+    .container{
+        max-width: 1200px;/*꼭 max-width로 쓰는 거 잊지말자*/
+        margin: 0 auto;
+    }
+    /*헤더*/
+    header{
+        height: 52px;
+        border-bottom: 1px solid #e4e4e4;
+    }
+    #innerHeader{
+        width: 95%;
+        height: 52px;
+        position: relative;
+    }
+    #innerHeader h4 a{
+        display: block;
+        width: 126px;
+        height: 21px;
+        position: relative;
+        top: 17px;
+        text-indent: -9999px;
+        overflow: hidden;
+        background: url(../images/logo.png)no-repeat 0 0;
+        background-size: 126px 21px;
+    }
+    .openMOgnb{
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        display: none;
+    }
+    #searchBar{
+        position: absolute;
+        top: 17px;
+        right: 50px;
+        padding: 2px 5px;
+        border: 1px solid #dededf ;
+    }
+    button{
+        position: absolute;
+        top: 16px;
+        right: 0px;
+        border: 1px solid #dededf;
+        background-color: white;
+        border-radius: 5px;
+        padding: 2px 5px;
+        cursor: pointer;
+    }
+    #innerHeader nav{
+        float: right;
+        width: 900px;
+        margin-top: -6px;
+    }
+    #innerHeader nav ul li{
+        display: inline;
+        font-weight: bold;
+        padding: 0px 25px;
+    }
+    #innerHeader nav ul li a{
+        color: #444;
+    }
+    #innerHeader nav ul li a:link{
+        color: #444;
+    }
+    #innerHeader nav ul li a:visited{
+        color: #444;
+    }
+    /*배너*/
+    figure{
+        width: 100%;
+        overflow: hidden;
+    }
+    figure::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    #trainRoom{
+        width: 200%;
+    }
+    #trainRoomM,#trainRoomT{
+        display: none;
+    }
+    .bxslider li{
+        width: 50%;
+        float: left;
+    }
+    .bxslider li img{
+        width: 50%;
+    }
+    /*컨텐츠*/
+    #conBox{
+        margin-top: 50px;
+        width: 95%;
+    }
+    /*아이콘메뉴*/
+    section#menu{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 95%;
+    }
+    section#menu h3{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .icons::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .icons{
+        display: grid;
+        grid-template-columns: repeat(9,1fr);
+    }
+    .icons li{
+        height: 110px;
+        margin-bottom: 30px;
+        text-align: center;
+        padding: 20px 0px;
+    }
+    .icons li:hover{
+        opacity: 0.7;
+    }
+    .icons li a:link,.icons li a:visited{
+        color: #444;
+    }
+    .icons li img{
+        width: 70px;
+        height: 70px;
+    }
+    .icons li p.icontext{
+        text-align: center;
+        font-size: 15px;
+        padding-top: 10px;
+    }
+    /*알려드립니다.*/
+    article#news{
+        width: 100%;
+        height: 200px;
+        padding-top: 25px;
+        box-sizing: border-box;
+        position : relative;
+        z-index : 10;
+    }
+    article#news:after {
+        width : 100%;
+        height : 100%;
+        content : "";
+        background: url(../images/reservation.jpg)center;
+        background-size: 100%;
+        opacity: 0.5;
+        position : absolute;
+        top : 0;
+        left : 0;
+        z-index : -1;
+    }
+    #news a{
+        text-align: center;
+        color: rgb(0, 0, 0);
+    }
+    #news a:link,#news a:visited{
+        color: rgb(0, 0, 0);
+    }
+    #news a h2{
+        font-size: 18px;
+        margin-top: -20px;
+        padding: 70px 0;
+    }
+    #news a h2 strong{
+        font-size: 15px;
+    }
+    /*메인*/
+    #colorArea{
+        background-color: rgb(247, 247, 247);
+        padding: 20px 0;
+    }
+    .innerBox div{
+        float: left;
+        margin-right: 2.8%;
+    }
+    .innerBox div:last-child{
+        margin-right: 0;
+    }
+    .innerBox:after{
+        content: " ";
+        display: block;
+        clear: both;
+    }
+    /*오시는길영역*/
+    #soughtAfter{
+        width: 30%;
+        background-color: #ef6266;
+        padding: 20px 0px;
+        border-radius: 30px 10px 30px 10px;
+        margin-bottom: 50px;
+    }
+    #soughtAfter ul li{
+        border-bottom: 1px solid rgb(255, 173, 173);
+        padding: 10px;
+        text-indent: 20px;
+    }
+    #soughtAfter ul li:last-child{
+        border: none;
+    }
+    #soughtAfter ul li a{
+        display: block;
+    }
+    .sought1{
+        background: url(../images/iconmap.png)no-repeat 90% 0;
+    }
+    .sought2{
+        background: url(../images/iconparking.png)no-repeat 90% 0;
+    }
+    .sought3{
+        background: url(../images/icondocu.png)no-repeat 90% 0;
+    }
+    .sought4{
+        background: url(../images/iconinfo.png)no-repeat 90% 0;
+    }
+    .sought5{
+        background: url(../images/iconstair.png)no-repeat 90% 0;
+    }
+    #soughtAfter ul li a:link,#soughtAfter ul li a:visited{
+        color: white;
+    }
+    /*진료과안내영역*/
+    #info{
+        width: 30%;
+        background-color: #2fa298;
+        padding: 20px 0;
+        border-radius: 10px 30px 10px 30px;
+        margin-bottom: 50px;
+    }
+    #info ul li{
+        border-bottom: 1px solid #4dd4c9;
+        padding: 10px;
+        text-indent: 20px;
+    }
+    #info ul li:last-child{
+        border: none;
+    }
+    #info ul li a{
+        display: block;
+    }
+    .info1{
+        background: url(../images/icondepartment.png)no-repeat 90% 0;
+    }
+    .info2{
+        background: url(../images/iconschedule.png)no-repeat 90% 0;
+    }
+    .info3{
+        background: url(../images/iconbed.png)no-repeat 90% 0;
+    }
+    .info4{
+        background: url(../images/iconbuilding.png)no-repeat 90% 0;
+    }
+    #info ul li a:link,#info ul li a:visited{
+        color: rgb(255, 255, 255);
+    }
+    /*국민건강알림서비스*/
+    #alert{
+        width: 30%;
+        border: 1px solid rgb(226, 226, 226);
+        background-color: white;
+        border-radius: 20px;
+        padding: 20px;
+        margin-bottom: 50px;
+    }
+    #alert p{
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    #Btnarea{
+        position: relative;
+        width: 100%;
+        margin-top: 160px;
+        margin-bottom: 20px;
+    }
+    #Btnarea ul{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        text-align: center;
+    }
+    #Btnarea li{
+        border: 1px solid #ccc;
+        padding: 5px;
+    }
+    #Btnarea li a:link,#Btnarea li a:visited{
+        color: #444;
+    }
+    #Btnarea a{
+        display: block;
+    }
+    #alert h2{
+        margin-top: 10px;
+        position : absolute;
+        text-align: center;
+	    top : -160px;
+	    left : 0;
+        width: 100%;
+    }
+    /*고객센터영역*/
+    #service{
+        border: 1px solid rgb(226, 226, 226);
+        background-color: white;
+        border-radius: 20px;
+        padding: 20px;
+        color: #444;
+        margin-bottom: 50px;
+    }
+    #service p{
+        font-size: 18px;
+        font-weight: bold;
+    }
+    #service ul.serviceBox{
+        margin: 20px 0px;
+    }
+    .serviceBox li{
+        background-color:rgb(243, 243, 243);
+        border-radius: 15px;
+        height: 95px;
+        margin-bottom: 20px;
+        padding: 20px 20px;
+        box-sizing: border-box;
+        position: relative;
+    }
+    .serviceBox li:nth-of-type(odd){
+        width: 48%;
+        float: left;
+    }
+    .serviceBox li:nth-of-type(even){
+        width: 48%;
+        float: right;
+    }
+    .serviceBox h3{
+        width: 45%;
+        font-size: 15px;
+        margin-left: 15%;
+    }
+    .serviceBox h2{
+        font-size: 21px;
+        display: inline;
+        width: 45%;
+        margin-left: 15%;
+    }
+    .serviceBox h5{
+        float: right;
+        width: 50%;
+        margin-top: -20px;
+    }
+    .serviceBox::after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    .serviceBox h4{
+        text-align: center;
+        margin-top: -20px;
+        margin-left: -20px;
+        margin-right: -20px;
+        line-height: 90px;
+    }
+    .serviceBox h4 img{
+        width: 28px;
+        height: 28px;
+        position: relative;
+        top: 5px;
+        right: 8px;
+    }
+    .highlight{
+        display: inline-table;
+        position: relative;
+        overflow: hidden;
+    }
+    .highlight span{
+        position: relative;
+        z-index: 2;
+    }
+    .highlight::before{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 25px;
+        background: rgba(255, 200, 0, .8);
+        position: absolute;
+        top: 35px;
+        left: -100%;
+        transition: all .35s;
+        z-index: 1;
+    }
+    .serviceBox li:hover .highlight::before{
+        left: 0;
+    }
+    .serviceBox li a:link,.serviceBox li a:visited{
+        color: #444;
+    }
+    /*퀵메뉴영역*/
+    #quick{
+        position: fixed;
+        bottom: 70px;
+        right: 30px;
+        z-index: 30;
+    }
+    #quick ul li{
+        background-color: #2fa298;
+        padding: 12px;
+        margin-bottom: 10px;
+        border-radius: 200px;
+        text-align: center;
+    }
+    #quick ul li h1{
+        font-size: 15px;
+        color: white;
+    }
+    #quick ul li h1 strong{
+        display: none;
+    }
+    /*푸터*/
+    footer{
+        max-width: 1920px;
+        margin: 0 auto;
+        border-top: 1px solid #e4e4e4;
+        padding: 20px 20px;
+    }
+    #innerFooter{
+        width: 100%;
+    }
+    #innerFooter:after{
+        content: "";
+        display: block;
+        clear: both;
+    }
+    #innerFooter #logowb{
+        width: 10%;
+        margin-bottom: 10px;
+    }
+    .address{
+        font-size: 13px;
+    }
+    .copy{
+        margin-top: 10px;
+        font-size: 13px;
+        font-weight: bold;
+    }
+    .footIcon{
+        float: right;
+        margin-top: -110px;
+    }
+    .footIcon li{
+        display: inline;
+        padding: 0px 20px;
+    }
+    .footIcon li img{
+        width: 65px;
+        height: 65px;
+    }
+}/*pc 미디어쿼리 끝*/
+
+
+/* example from Gideon */
+
+/* Changing the visibility */
+.cold, .eye, .fp, .asth {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
